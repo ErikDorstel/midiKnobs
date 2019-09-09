@@ -1,6 +1,6 @@
 # midiKnobs
 64 Knobs MIDI Controller
-### This MIDI controller supports 64 analog knobs (analog pots 10 kΩ) and converts the analog levels to MIDI.
+### This Teensy 3.2 based MIDI controller supports 64 analog knobs (analog pots 10 kΩ) and converts the analog levels to MIDI.
 
 The 64 analog inputs are demultiplexed to 4 analog lines by using four 74HC4067 circuits. The schematic is stored in the documentation folder.
 
