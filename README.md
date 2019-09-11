@@ -8,6 +8,7 @@ The three bytes MIDI output has the following format:
 
     <0xBn><knob><value>
 
+    0xB is the MIDI control change prefix
     n is the MIDI channel (0-15 configurable within the code)
     knob is the number of the analog input line (0-63)
     value is the analog level (0-127)
