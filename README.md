@@ -10,7 +10,7 @@ The three bytes MIDI output has the following format:
 
     0xB is the MIDI control change prefix
     n is the MIDI channel (0-15 configurable within the code)
-    knob is the number of the analog input line (0-63)
+    knob is the number of the analog input line (0-63) and also the MIDI controller number
     value is the analog level (0-127)
 
 The program quickly scans for pots with changed values and immediately sends updates with the new values. A second slower loop not depends on level changes and sends updates for all pots within a 16 seconds interval with 1 second steps.
