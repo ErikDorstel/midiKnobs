@@ -3,17 +3,17 @@ const bool hc4067_0=true;
 const bool hc4067_1=true;
 const bool hc4067_2=false;
 const bool hc4067_3=false;
-const int MIDIchannel=1;
+const byte MIDIchannel=0;
 
 void setup() {
   if (logging) { Serial.begin(9600); }
-  Serial1.begin(31250);
+  Serial1.begin(31250,SERIAL_8N1);
   pinMode(2, OUTPUT); pinMode(3, OUTPUT); pinMode(4, OUTPUT); pinMode(5, OUTPUT); pinMode(13, OUTPUT);
   analogReadResolution(7); }
   
 void loop() {
-  static int knobs[64],counter,curPort;
-  int mulPort,knob;
+  static byte knobs[64],counter,curPort;
+  byte mulPort,knob;
   
   for (mulPort=0;mulPort<=15;mulPort++) {
     selectPort(mulPort);
@@ -34,8 +34,8 @@ void loop() {
     
   delay(10); digitalWrite(13, LOW); }
 
-  void selectPort(int port) { digitalWrite(2, port&1); digitalWrite(3, port&2); digitalWrite(4, port&4); digitalWrite(5, port&8); }
+  void selectPort(byte port) { digitalWrite(2, port&1); digitalWrite(3, port&2); digitalWrite(4, port&4); digitalWrite(5, port&8); }
   
-  void sendMidi(int knobNumber, int knob) {
+  void sendMidi(byte knobNumber, byte knob) {
     Serial1.write(0xb0+MIDIchannel); Serial1.write(knobNumber); Serial1.write(knob);
     if (logging) { Serial.print(knobNumber); Serial.print(" "); Serial.println(knob); } }
