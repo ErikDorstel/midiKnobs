@@ -14,3 +14,7 @@ The three bytes MIDI output has the following format:
     value is the analog level (0-127)
 
 The program quickly scans for pots with changed values and immediately sends updates with the new values. A second slower loop not depends on level changes and sends updates for all pots within a 16 seconds interval with 1 second steps.
+
+Optionally, a touch color display with ILI9341 controller chip is supported. The display shows the set MIDI parameters as a bar graph. The names of the bars can be edited in the "Display.h" file. The display support requires the following libraries:
+- https://github.com/PaulStoffregen/Optimized_ILI9341
+- https://github.com/PaulStoffregen/XPT2046_Touchscreen
