@@ -16,8 +16,8 @@ void setup() {
   Serial1.begin(31250,SERIAL_8N1);
   pinMode(3, OUTPUT); pinMode(4, OUTPUT); pinMode(5, OUTPUT); pinMode(6, OUTPUT);
   analogReadResolution(7);
-  if (display) { initScreen(); setScreen(); }
-  delay(1000); timer.interval(10); timer.reset(); }
+  if (display) { initScreen(); setScreen(); } else { delay(1000); }
+  timer.interval(10); timer.reset(); }
   
 void loop() {
   static byte counter, curPort; byte mulPort, knobValue;

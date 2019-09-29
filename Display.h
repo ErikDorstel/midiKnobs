@@ -22,18 +22,18 @@ int currScreen=0, maxScreen=3;
 
 void initScreen() {
   tft.begin(); tft.setRotation(3); ts.begin(); ts.setRotation(1); delay(1000);
-  tft.fillScreen(ILI9341_BLACK); tft.fillRect(319-50,0,50,50,ILI9341_RED); tft.fillRect(319-50,230-50,50,50,ILI9341_RED);
+  tft.fillScreen(ILI9341_BLACK); tft.fillRect(319-50,0,50,50,ILI9341_RED); tft.fillRect(319-50,239-50,50,50,ILI9341_RED);
   tft.setTextColor(ILI9341_WHITE); tft.setFont(Arial_12);
-  tft.setCursor(285,17); tft.print("Up"); tft.setCursor(275,200); tft.print("Down"); }
+  tft.setCursor(285,17); tft.print("Up"); tft.setCursor(275,209); tft.print("Down"); }
 
 void setGauge(byte g) {
   if (g-(g%8) == currScreen*8) { int y=2+((g%8)*30); int x=knobValues[g]*2;
     tft.fillRect(0,y,x,26,ILI9341_BLUE); tft.fillRect(x+1,y,255-x,26,ILI9341_BLACK);
-    tft.setCursor(2,y+6); tft.print(knobText[g]); } }
+    tft.setCursor(2,y+7); tft.print(knobText[g]); } }
 
 void setScreen() {
   if (currScreen < 0) { currScreen=maxScreen; } if (currScreen > maxScreen) { currScreen=0; }
-  tft.setFont(Arial_12); tft.fillRect(290,110,12,12,ILI9341_BLACK); tft.setCursor(290,110); tft.print(currScreen+1); tft.setFont(Arial_10);
+  tft.setFont(Arial_12); tft.fillRect(290,112,12,12,ILI9341_BLACK); tft.setCursor(290,112); tft.print(currScreen+1); tft.setFont(Arial_10);
   for (byte z=0;z<=7;z++) { setGauge(z+(currScreen*8)); } }
 
 void getTouch() {
