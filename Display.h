@@ -3,16 +3,12 @@
 #include <XPT2046_Touchscreen.h>
 #include <SPI.h>
 
-#define CS_PIN  8
+#define Touch_CS  8
+#define Touch_IRQ  2
 #define TFT_DC  9
 #define TFT_CS 10
-// MOSI=11, MISO=12, SCK=13
-XPT2046_Touchscreen ts(CS_PIN);
-#define TIRQ_PIN  2
-//XPT2046_Touchscreen ts(CS_PIN);  // Param 2 - NULL - No interrupts
-//XPT2046_Touchscreen ts(CS_PIN, 255);  // Param 2 - 255 - No interrupts
-//XPT2046_Touchscreen ts(CS_PIN, TIRQ_PIN);  // Param 2 - Touch IRQ Pin - interrupt enabled polling
-ILI9341_t3 tft = ILI9341_t3(TFT_CS, TFT_DC);
+XPT2046_Touchscreen ts(Touch_CS); // XPT2046_Touchscreen ts(Touch_CS,Touch_IRQ); for interrupt enabled polling
+ILI9341_t3 tft=ILI9341_t3(TFT_CS,TFT_DC);
 
 char const *knobText[64]={"Attack","Hold","Decay","Sustain","Release","Arpeggiator Mode","Arpeggiator Speed","Glissando Speed",\
   "VCO 1 Waveform","VCO 2 Waveform","VCO 1/2 Ratio","VCO 2 Shift","Filter Bypass","Filter Lowpass","Filter Bandpass","Filter Highpass",\
