@@ -23,6 +23,7 @@ int currScreen=0, maxScreen=3;
 void initScreen() {
   tft.begin(); tft.setRotation(3); ts.begin(); ts.setRotation(1); delay(1000);
   tft.fillScreen(ILI9341_BLACK); tft.fillRect(319-50,0,50,50,ILI9341_RED); tft.fillRect(319-50,239-50,50,50,ILI9341_RED);
+  tft.fillRect(31*2,0,2,319,ILI9341_YELLOW); tft.fillRect(63*2,0,2,319,ILI9341_YELLOW); tft.fillRect(95*2,0,2,319,ILI9341_YELLOW);
   tft.setTextColor(ILI9341_WHITE); tft.setFont(Arial_12);
   tft.setCursor(285,17); tft.print("Up"); tft.setCursor(275,209); tft.print("Down"); }
 
