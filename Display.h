@@ -21,12 +21,12 @@ void initScreen() {
   tft.fillScreen(ILI9341_BLACK); tft.fillRect(319-50,0,50,50,ILI9341_RED); tft.fillRect(319-50,239-50,50,50,ILI9341_RED);
   tft.fillRect(31*2,0,2,319,ILI9341_YELLOW); tft.fillRect(63*2,0,2,319,ILI9341_YELLOW); tft.fillRect(95*2,0,2,319,ILI9341_YELLOW);
   tft.setTextColor(ILI9341_WHITE); tft.setFont(Arial_12);
-  tft.setCursor(285,17); tft.print("Up"); tft.setCursor(275,209); tft.print("Down"); }
+  tft.setCursor(275,17); tft.print("Down"); tft.setCursor(285,209); tft.print("Up"); }
 
 void setGauge(byte g) {
   if (g-(g%8) == currScreen*8) { int y=2+((g%8)*30); int x=knobValues[g]*2;
     tft.fillRect(0,y,x,26,ILI9341_BLUE); tft.fillRect(x+1,y,255-x,26,ILI9341_BLACK);
-    tft.setCursor(2,y+7); tft.print(knobText[g]); } }
+    tft.setCursor(4,y+7); tft.print(knobText[g]); } }
 
 void setScreen() {
   if (currScreen < 0) { currScreen=maxScreen; } if (currScreen > maxScreen) { currScreen=0; }
