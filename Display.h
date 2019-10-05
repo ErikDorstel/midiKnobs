@@ -15,7 +15,10 @@ char const *knobText[10][64]={ {"Attack","Hold","Decay","Sustain","Release","Arp
   "LFO VCO Waveform","LFO VCO Phase Start","LFO VCO Level","LFO VCO Frequency","","","","",\
   "LFO Filter Waveform","LFO Filter Phase Start","LFO Filter Level","LFO Filter Frequency","Filter Frequency","Filter Resonance","","VCO 1+2 Level"},\
   {"Modulator Bottom Frequency","Modulator Top Frequency","Carrier Bottom Frequency","Carrier Top Frequency",\
-  "Envelope Speed","Envelope Limiter","Filter Resonance","Output Amplifier","Modulator Source","Carrier Source"} };
+  "Envelope Speed","Envelope Limiter","Filter Resonance","Output Amplifier",\
+  "LFO Waveform","VCO 1 Waveform","VCO 2 Waveform","VCO 3 Waveform","VCO 4 Waveform","","Modulator Source","Carrier Source",\
+  "LFO Level","VCO 1 Level","VCO 2 Level","VCO 3 Level","VCO 4 Level","","","",\
+  "LFO Frequency","VCO 1 Frequency","VCO 2 Frequency","VCO 3 Frequency","VCO 4 Frequency","","",""} };
 
 int currScreen[10]={0,0}, maxScreen[10]={3,1}, currApp=0, maxApp=1;
 
