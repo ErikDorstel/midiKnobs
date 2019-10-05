@@ -20,7 +20,7 @@ char const *knobText[10][64]={ {"Attack","Hold","Decay","Sustain","Release","Arp
   "LFO Level","VCO 1 Level","VCO 2 Level","VCO 3 Level","VCO 4 Level","","","",\
   "LFO Frequency","VCO 1 Frequency","VCO 2 Frequency","VCO 3 Frequency","VCO 4 Frequency","","",""} };
 
-int currScreen[10]={0,0}, maxScreen[10]={3,1}, currApp=0, maxApp=1;
+int currApp=0, maxApp=1, currScreen[10]={0,0}, maxScreen[10]={3,3};
 
 void initScreen() {
   tft.begin(); tft.setRotation(3); ts.begin(); ts.setRotation(1); delay(1000);
