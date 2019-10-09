@@ -11,9 +11,9 @@ XPT2046_Touchscreen ts(Touch_CS); // XPT2046_Touchscreen ts(Touch_CS,Touch_IRQ);
 ILI9341_t3 tft=ILI9341_t3(TFT_CS,TFT_DC);
 
 char const *knobText[10][64]={ {"Attack","Hold","Decay","Sustain","Release","Arpeggiator Mode","Arpeggiator Speed","Glissando Speed",\
-  "VCO 1 Waveform","VCO 2 Waveform","VCO 1/2 Ratio","VCO 2 Shift","Filter Bypass","Filter Lowpass","Filter Bandpass","Filter Highpass",\
-  "LFO VCO Waveform","LFO VCO Phase Start","LFO VCO Level","LFO VCO Frequency","","","","",\
-  "LFO Filter Waveform","LFO Filter Phase Start","LFO Filter Level","LFO Filter Frequency","Filter Frequency","Filter Resonance","","VCO 1+2 Level"},\
+  "VCO 1 Waveform","VCO 2 Waveform","VCO 1/2 Ratio","VCO 1/2 Add/Multiply","VCO 2 Shift","VCO 1+2 Level","","",\
+  "LFO VCO Waveform","LFO VCO Phase Start","LFO VCO Level","LFO VCO Frequency","Filter Bypass","Filter Lowpass","Filter Bandpass","Filter Highpass",\
+  "LFO Filter Waveform","LFO Filter Phase Start","LFO Filter Level","LFO Filter Frequency","Filter Frequency","Filter Resonance","",""},\
   {"Modulator Bottom Frequency","Modulator Top Frequency","Carrier Bottom Frequency","Carrier Top Frequency",\
   "Envelope Speed","Envelope Limiter","Filter Resonance","Output Amplifier",\
   "LFO 1 Waveform","LFO 2 Waveform","VCO 1 Waveform","VCO 2 Waveform","VCO 3 Waveform","VCO 4 Waveform","Modulator Source","Carrier Source",\
