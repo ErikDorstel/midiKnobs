@@ -15,7 +15,7 @@ The three bytes MIDI output has the following format:
 
 The program quickly scans for pots with changed values and immediately sends updates with the new values. A second slower loop not depends on level changes and sends updates for all pots within a 16 seconds interval with 1 second steps.
 
-Optionally, a touch color display with ILI9341 controller chip is supported. The display shows the set MIDI parameters as a bar graph. The names of the bars can be edited in the "Display.h" file. The tree is preconfigured to control the following devices:
+Optionally, a touch color display with ILI9341 controller chip is supported. The display shows the set MIDI parameters as a bar graph. The names of the bars can be edited in the "Display.h" file. The "Display.h" file is preconfigured to control the following devices:
 - https://github.com/ErikDorstel/octoTron
 - https://github.com/ErikDorstel/sonoTron
 
