@@ -22,3 +22,5 @@ Optionally, a touch color display with ILI9341 controller chip is supported. The
 The display support requires the following libraries:
 - https://github.com/PaulStoffregen/Optimized_ILI9341
 - https://github.com/PaulStoffregen/XPT2046_Touchscreen
+
+[Example Video](https://www.youtube.com/watch?v=crX1zdYAdEI)
