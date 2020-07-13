@@ -24,3 +24,5 @@ The display support requires the following libraries:
 - https://github.com/PaulStoffregen/XPT2046_Touchscreen
 
 [Example Video](https://www.youtube.com/watch?v=crX1zdYAdEI)
+[![IMAGE ALT TEXT HERE](http://www.dorstel.de/github/Teensy_3.6_MIDI_Controller_1.png)](https://www.youtube.com/watch?v=crX1zdYAdEI)
+[![IMAGE ALT TEXT HERE](http://www.dorstel.de/github/Teensy_3.6_MIDI_Controller_2.png)](https://www.youtube.com/watch?v=crX1zdYAdEI)
